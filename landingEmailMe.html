@@ -1,0 +1,33 @@
+<h1 class="textCenter">Send Me More Information.</h1>
+<button id="closeEmailForm">Close Form</button>
+
+<form method="GET">
+    <input required type="text" name="firtName" placeholder="First Name?">
+    <input required type="text" name="lastName" placeholder="Last Name?"><br>
+
+    <input required type="date" name="Birthday" placeholder="What is your birthday?"><br>
+    
+    <input type="radio" name="gender" value="Male"><button>Male</button>
+    <input type="radio" name="gender" value="Female"><button>Female</button>
+    <input type="radio" name="gender" value="Other"><button>Other</button><br>
+
+    <input required type="email" name="e-mail" placeholder="Your E-Mail Here">
+
+    <input type="submit" name="register" value="Request!">
+    <input type="reset" name="clear" value="Clear Form">
+</form>
+
+<script type="text/javascript">
+
+$("#closeEmailForm").click(function() {
+    $("#landingLearnMoreModal")
+        .css("display", "block")
+        .removeClass("animated zoomInLeft")
+        .addClass("animated zoomOutLeft");
+
+    setTimeout(function() {
+        $("#landingLearnMoreModal").css("display", "none");
+    }, 2500);
+});
+
+</script>

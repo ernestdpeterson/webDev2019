@@ -1,0 +1,25 @@
+<h1 class="textCenter">Registration Form</h1>
+
+<form method="GET">
+    <input required type="text" name="Name" placeholder="Your Name Here"><br>
+
+    <button>Birthday:</button><input required type="date" name="Birthday"><br>
+
+    <button>Gender</button><br>
+        <input type="radio" name="gender" value="Male"><button>Male</button><br>
+        <input type="radio" name="gender" value="Female"><button>Female</button><br>
+        <input type="radio" name="gender" value="Other"><button>Other</button><br>
+
+    <button>Your Car?</button>
+        <select>
+            <option value="Ford" name="Ford">Ford</option>
+            <option value="Chevy" name="Chevy">Chevy</option>
+            <option value="Mercedez" name="Mercedez">Mercedez</option>
+        </select><br>
+
+    <input required type="email" name="e-mail" placeholder="Your E-Mail Here">
+    <input required type="password" name="password" placeholder="Password!" minlength="10"><br>
+
+    <input type="submit" name="register" value="Register!">
+    <input type="reset" name="clear" value="Clear Form">
+</form>

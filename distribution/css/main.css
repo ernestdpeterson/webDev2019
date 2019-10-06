@@ -1,0 +1,25 @@
+.head,.left_arm,.torso,.right_arm,.left_leg,.right_leg{background-color:#5f93e8}.head{width:200px;margin:0 auto;height:150px;border-radius:200px 200px 0 0;margin-bottom:10px}
+.head:hover{width:300px;-webkit-transition:1s ease-in-out;transition:1s ease-in-out}
+.head:hover .left_eye,.head:hover .right_eye{background-color:blue;-webkit-transition:1s ease-in-out;transition:1s ease-in-out}
+.head:hover .left_eye{left:-60px}.head:hover .right_eye{left:10px}.eyes{position:relative;top:100px}
+.upper_body{width:300px;height:150px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.left_arm,.right_arm{width:40px;height:125px;border-radius:100px}.right_arm{margin-left:10px}
+.right_arm:hover{-webkit-transform:skew(25deg);-ms-transform:skew(25deg);transform:skew(25deg)}
+.left_arm{margin-right:10px}.left_arm:hover{-webkit-transform:skew(-25deg);-ms-transform:skew(-25deg);transform:skew(-25deg)}
+.torso{width:200px;height:200px;border-radius:0 0 50px 50px}.torso:hover .heart{background-color:red;-webkit-transition:1s ease-in-out;transition:1s ease-in-out;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-animation-name:heartbeat;animation-name:heartbeat;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
+.heart{height:50px;width:50px;position:relative;top:30px;left:40px;background-color:transparent;-webkit-clip-path:polygon(49% 19%,74% 10%,88% 25%,84% 50%,68% 71%,46% 85%,29% 72%,14% 48%,14% 21%,28% 10%);clip-path:polygon(49% 19%,74% 10%,88% 25%,84% 50%,68% 71%,46% 85%,29% 72%,14% 48%,14% 21%,28% 10%)}
+@-webkit-keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1)}to{-webkit-transform:scale(2);transform:scale(2)}
+}@keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1)}to{-webkit-transform:scale(2);transform:scale(2)}
+}.lower_body{width:200px;height:200px;margin:0 auto}.left_leg,.right_leg{width:40px;height:120px;border-radius:0 0 100px 100px}
+.left_leg{margin-left:45px;position:relative}.left_leg:hover{-webkit-transform:rotate(20deg);-ms-transform:rotate(20deg);transform:rotate(20deg);top:-20px}
+.right_leg{margin-left:30px;position:relative;top:-120px;left:80px}.right_leg:hover{-webkit-transform:rotate(-20deg);-ms-transform:rotate(-20deg);transform:rotate(-20deg);top:-150px}
+.left_eye,.right_eye{width:20px;height:20px;border-radius:100%;background-color:#89d0f1}
+.left_eye{position:relative;top:0;left:-30px}.right_eye{position:relative;top:-20px;left:40px}
+*{max-width:1257px;margin:auto}*,::before,::after{box-sizing:inherit}html{height:100%;box-sizing:border-box}
+body{position:relative;margin:0;padding-bottom:6rem;min-height:100%;background-color:lightgray}
+.textCenter{text-align:center;font-size:2vw;color:#3a3a3a}nav{text-align:right}nav button{background:#ededed;border-radius:15px}
+#theTitle{color:#dca643;font-weight:bolder;font-size:10vw}form{background-color:lightgray;border:2px solid green;width:50%;text-align:center}
+#secondSection{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;text-align:center;font-family:"Lobster",cursive}
+.imgHeader{color:#dca643;font-size:10vw}img{width:450px;height:300px;border-radius:5px;border:3px solid #bfa36f;-webkit-transition:all 1s;transition:all 1s}
+img:hover{-webkit-transform:scale(1.25);-ms-transform:scale(1.25);transform:scale(1.25)}
+.bkgnd{background-color:lightblue;border:1px solid black}#theFooter{position:absolute;left:0;right:0;bottom:0;padding:1rem 0 1rem 0}
