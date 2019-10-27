@@ -1,0 +1,74 @@
+.zone {
+    cursor:pointer;
+    color:#FFF;
+    font-size:2em;
+    border-radius:4px;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
+}
+
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+#cssLayoutSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+/*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
+/*  Green Background  */
+.green{
+    align-self: center;
+    background: linear-gradient(top, #56B870 0%,#a5c956 100%); /* W3C */
+    grid-column: span 6;
+    margin: 0;
+    text-align: center;
+}
+.main-nav {
+    display: flex;
+    list-style: none;
+    text-align: left;
+    margin: 0;
+}
+li {
+    margin: 0;
+    padding: 0px 20px;
+}
+.lastItem {
+    margin-left: auto;
+}
+
+/*  Red Background  */
+.red{
+    align-self: center;
+    background: linear-gradient(top, #C655BE 0%,#cf0404 100%); /* W3C */
+    grid-column: span 6;
+    height: 30vh;
+    margin: 0;
+    text-align: center;
+}
+
+/*  Yellow Background  */
+.yellow{
+    align-self: end;
+    background: linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* W3C */
+    grid-column: span 6;
+    margin: 0;
+    text-align: center;
+}
+
+/*  Blue Background  */
+.blue{
+    // align-self: center;
+    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+    grid-column: span 6;
+    margin: 0;
+    text-align: center;
+}
+.objectsInBlue {
+    grid-column: 1fr;
+}

@@ -1,0 +1,180 @@
+@import "robot";
+// @import "cssGrid";
+@import "cssLayout";
+
+$lg: lightgray;
+
+* {
+    max-width: 1257px;
+    margin: auto;
+}
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+    background-color: $lg;
+}
+.textCenter {
+    text-align: center;
+    font-size: 2vw;
+    color: darken($lg, 60%);
+}
+nav {
+    text-align: right;
+    button {
+        background: lighten($lg, 10%);
+        border-radius: 15px;
+    }
+}
+#theTitle {
+    color: #dca643;
+    font-weight: bolder;
+    font-size: 10vw;
+}
+#firstSection {
+  // margin: 0;
+  // position: relative;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+}
+form {
+    background-color: $lg;
+    border: 2px solid green;
+    width: 50%;
+    text-align: center;
+}
+#secondSection {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: "Lobster", cursive;
+}
+.imgHeader {
+    color: #dca643;
+    font-size: 10vw;
+}
+.imagesSection {
+    width: 450px;
+    height: 300px;
+    border-radius: 5px;
+    border: 3px solid #bfa36f;
+    transition: all 1s;
+        &:hover {
+            transform: scale(1.25);
+        }
+}
+.bkgnd {
+    background-color: lightblue;
+    border: 1px solid black;
+}
+.oddFont {
+    font-family: "Lobster", cursive;
+}
+#landingPageSection {
+    background-image: url("../images/greenValley.jpg");
+    background-size: cover;
+    height: 100vh;
+    max-height: 800px;
+    margin: 0;
+    width: 100%;
+}
+.landingSectionHeader {
+    color: darken($lg, 40%);
+    font-size: 6vw;
+    position: relative;
+    text-shadow: 
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    top: 20%;
+}
+.spaceImageDiv {
+    background-color: $lg;
+    background-image: url("../images/space.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    height: 20vh;
+    position: relative;
+    top: 20vh;
+}
+.imageCaptioin {
+    color: $lg;
+    font-size: 5vw;
+    position: relative;
+    text-align: center;
+    text-shadow: 
+        -1px -1px 0 white,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    top: 30%
+}
+.landingInfo {
+    height: 10vh;
+    position: relative;
+    text-align: center;
+    top: 25vh;
+}
+.landingButton {
+    background-color: transparent;
+    border-radius: 15px;
+    color: darken(#74a9cf, 20%);
+    cursor: pointer;
+    text-shadow: 
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+    transition: all 0.25s;
+        &:hover {
+            transform: scale(1.25);
+        }
+}
+// for the landing modals
+.landingModal {
+    height: 200px;
+    border: 2px solid $lg;
+    border-radius: 5px;
+    position: relative;
+    top: 25%;
+    width: 800px;
+    z-index: 10;
+}
+#landingInfoModal {
+    background-color: lightblue;
+    display: none;
+}
+#landingLearnMoreModal {
+    background-color: lightgreen;
+    display: none;
+}
+#landingDonateModal {
+    background-color: orange;
+    display: none;
+}
+#closeEmailForm:hover {
+    background-color: red;
+}
+#cssGridSection {
+    display: none;
+}
+#theFooter {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem 0 1rem 0;
+}
