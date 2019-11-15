@@ -1,5 +1,5 @@
 @import "robot";
-// @import "cssGrid";
+@import "cssGrid";
 @import "cssLayout";
 
 $lg: lightgray;
@@ -28,6 +28,9 @@ body {
     text-align: center;
     font-size: 2vw;
     color: darken($lg, 60%);
+}
+.somePadding {
+    padding-top: 40px;
 }
 nav {
     text-align: right;
@@ -167,9 +170,6 @@ form {
 }
 #closeEmailForm:hover {
     background-color: red;
-}
-#cssGridSection {
-    display: none;
 }
 #theFooter {
     position: absolute;

@@ -54,32 +54,69 @@
 
 .right_eye { position: relative; top: -20px; left: 40px; }
 
-.zone { cursor: pointer; color: #FFF; font-size: 2em; border-radius: 4px; border: 1px solid #bbb; -webkit-transition: all 0.3s linear; transition: all 0.3s linear; }
+#cssGridSection { background-color: lightblue; width: 100%; }
 
-.zone:hover { -o-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px; box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px; }
+.gridContainer { display: grid; grid-gap: 5px; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); grid-template-rows: 1fr; background-color: red; }
+
+.gridgreen { grid-column: span 2; grid-row: 1/3; justify-self: start; align-self: end; background-color: red; }
+
+.gridzone { cursor: pointer; text-align: center; font-size: 10em; border-radius: 4px; border: 1px solid #bbb; margin: 0px; -webkit-transition: all 0.3s linear; transition: all 0.3s linear; }
+
+.gridzone:hover { box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px; }
+
+/*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
+/*********************************************************************** Green Background */
+.gridgreen { background: #56B870; /* Old browsers */ /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #56B870), color-stop(100%, #a5c956)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(top, #56B870 0%, #a5c956 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */ background: linear-gradient(top, #56B870 0%, #a5c956 100%); /* W3C */ }
+
+/*********************************************************************** Red Background */
+.gridred { background: #C655BE; /* Old browsers */ /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #C655BE), color-stop(100%, #cf0404)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(top, #C655BE 0%, #cf0404 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */ background: linear-gradient(top, #C655BE 0%, #cf0404 100%); /* W3C */ }
+
+/*********************************************************************** Yellow Background */
+.gridyellow { background: #F3AAAA; /* Old browsers */ /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F3AAAA), color-stop(100%, #febf04)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */ background: linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* W3C */ }
+
+/*********************************************************************** Blue Background */
+.gridblue { background: #7abcff; /* Old browsers */ /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7abcff), color-stop(44%, #60abf8), color-stop(100%, #4096ee)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */ background: linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* W3C */ }
+
+/*********************************************************************** Purple Background */
+.gridpurple { background: #A88BEB; /* Old browsers */ /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #A88BEB), color-stop(44%, #F1A7F1), color-stop(100%, #F8CEEC)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(top, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */ background: linear-gradient(top, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%); /* W3C */ }
+
+/*********************************************************************** Brown Background */
+.gridbrown { background: #f6e6b4; /* Old browsers */ /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6e6b4), color-stop(100%, #ed9017)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(top, #f6e6b4 0%, #ed9017 100%); /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */ background: linear-gradient(top, #f6e6b4 0%, #ed9017 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */ }
+
+.layoutZone { cursor: pointer; color: #FFF; font-size: 2em; border-radius: 4px; border: 1px solid #bbb; -webkit-transition: all 0.3s linear; transition: all 0.3s linear; }
+
+.layoutZone:hover { box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px; }
 
 #cssLayoutSection { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
 
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
 /*  Green Background  */
-.green { align-self: center; background: -webkit-linear-gradient(top, #56B870 0%, #a5c956 100%); background: linear-gradient(top, #56B870 0%, #a5c956 100%); /* W3C */ grid-column: span 6; margin: 0; text-align: center; }
+.layoutGreen { align-self: center; background: -webkit-linear-gradient(top, #00bcd478 0%, #2196f3 100%); background: linear-gradient(top, #00bcd478 0%, #2196f3 100%); grid-column: span 6; text-align: center; position: fixed; top: 0; width: 100%; }
 
-.main-nav { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; list-style: none; text-align: left; margin: 0; }
+.layoutMain-nav { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; list-style: none; text-align: left; margin: 0; }
+
+@media only screen and (max-width: 600px) { .layoutMain-nav { font-size: .5em; padding: 0; } }
 
 li { margin: 0; padding: 0px 20px; }
 
-.lastItem { margin-left: auto; }
+a { color: #f5f5f6; text-decoration: none; }
+
+.layoutContainer { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; height: 50vh; width: 98.5vw; }
+
+.layoutLastItem { margin-left: auto; }
 
 /*  Red Background  */
-.red { align-self: center; background: -webkit-linear-gradient(top, #C655BE 0%, #cf0404 100%); background: linear-gradient(top, #C655BE 0%, #cf0404 100%); /* W3C */ grid-column: span 6; height: 30vh; margin: 0; text-align: center; }
+.layoutRed > img { width: 40%; }
 
 /*  Yellow Background  */
-.yellow { align-self: end; background: -webkit-linear-gradient(top, #F3AAAA 0%, #febf04 100%); background: linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* W3C */ grid-column: span 6; margin: 0; text-align: center; }
+.layoutYellow { align-self: end; background: -webkit-linear-gradient(top, #F3AAAA 0%, #febf04 100%); background: linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* W3C */ grid-column: span 6; margin: 0; text-align: center; }
 
 /*  Blue Background  */
-.blue { background: -webkit-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); background: linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* W3C */ grid-column: span 6; margin: 0; text-align: center; }
+.layoutBlue { display: grid; grid-gap: 20px; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); grid-column: span 6; background: -webkit-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); background: linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); }
 
-.objectsInBlue { grid-column: 1fr; }
+.layoutObjectsInBlue { background-color: #444; padding: 110px; margin: 20px; }
+
+.layoutObjectsInBlue img { width: 100%; }
 
 * { max-width: 1257px; margin: auto; }
 
@@ -90,6 +127,8 @@ html { height: 100%; box-sizing: border-box; }
 body { position: relative; margin: 0; padding-bottom: 6rem; min-height: 100%; background-color: lightgray; }
 
 .textCenter { text-align: center; font-size: 2vw; color: #3a3a3a; }
+
+.somePadding { padding-top: 40px; }
 
 nav { text-align: right; }
 
@@ -134,7 +173,5 @@ form { background-color: lightgray; border: 2px solid green; width: 50%; text-al
 #landingDonateModal { background-color: orange; display: none; }
 
 #closeEmailForm:hover { background-color: red; }
-
-#cssGridSection { display: none; }
 
 #theFooter { position: absolute; left: 0; right: 0; bottom: 0; padding: 1rem 0 1rem 0; }

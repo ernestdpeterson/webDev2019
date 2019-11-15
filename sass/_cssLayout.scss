@@ -1,4 +1,4 @@
-.zone {
+.layoutZone {
     cursor:pointer;
     color:#FFF;
     font-size:2em;
@@ -7,10 +7,7 @@
     transition: all 0.3s linear;
 }
 
-.zone:hover {
-    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+.layoutZone:hover {
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
 
@@ -21,39 +18,57 @@
 
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
 /*  Green Background  */
-.green{
+.layoutGreen{
     align-self: center;
-    background: linear-gradient(top, #56B870 0%,#a5c956 100%); /* W3C */
+    background: linear-gradient(top, #00bcd478 0%,#2196f3 100%);
     grid-column: span 6;
-    margin: 0;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
-.main-nav {
+.layoutMain-nav {
     display: flex;
     list-style: none;
     text-align: left;
     margin: 0;
 }
+@media only screen and (max-width: 600px) {
+    .layoutMain-nav {
+        font-size: .5em;
+        padding: 0;
+    }
+}
 li {
     margin: 0;
     padding: 0px 20px;
 }
-.lastItem {
+a {
+    color: #f5f5f6;
+    text-decoration: none;
+}
+.layoutContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 98.5vw;
+}
+.layoutLastItem {
     margin-left: auto;
 }
 
 /*  Red Background  */
-.red{
-    align-self: center;
-    background: linear-gradient(top, #C655BE 0%,#cf0404 100%); /* W3C */
-    grid-column: span 6;
-    height: 30vh;
-    margin: 0;
-    text-align: center;
+.layoutRed{
+    // background: linear-gradient(top, #C655BE 0%,#cf0404 100%);
+}
+
+.layoutRed > img {
+    width: 40%;
 }
 
 /*  Yellow Background  */
-.yellow{
+.layoutYellow{
     align-self: end;
     background: linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* W3C */
     grid-column: span 6;
@@ -62,13 +77,18 @@ li {
 }
 
 /*  Blue Background  */
-.blue{
-    // align-self: center;
-    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+.layoutBlue{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-column: span 6;
-    margin: 0;
-    text-align: center;
+    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%);
 }
-.objectsInBlue {
-    grid-column: 1fr;
+.layoutObjectsInBlue {
+    background-color: #444;
+    padding: 110px;
+    margin: 20px;
+    img {
+        width: 100%;
+    }
 }
