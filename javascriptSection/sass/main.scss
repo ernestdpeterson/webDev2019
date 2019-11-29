@@ -19,6 +19,9 @@ body {
     min-height: 88vh;
     background-color: $lg;
 }
+#todoList > li > button{
+    border-radius: 4px;
+}
 #theFooter{
     position: absolute;
     left: 0;
