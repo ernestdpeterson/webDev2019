@@ -47,8 +47,6 @@ var browserSync = require('browser-sync').create();
 //     "bb >= 10"
 //   ]
 var eslint = require('gulp-eslint');
-// npm install gulp-concat
-// var concat = require('gulp-concat');
 // npm install --save-dev gulp-babel @babel/core @babel/preset-env
 var babel = require('gulp-babel');
 // npm install --save-dev gulp-uglify
@@ -57,6 +55,8 @@ var uglify = require('gulp-uglify');
 var uglifycss = require('gulp-uglifycss');
 // npm install --save-dev gulp-shell
 var shell = require('gulp-shell');
+// npm install --save-dev gulp-replace
+var replace = require('gulp-replace');
 // gulp Start
 
 gulp.task('default', function(done) {
@@ -93,7 +93,7 @@ gulp.task('lint', function() {
         // alternatively us eslint.formatEach() (see Docs).
         .pipe(eslint.format())
         // to have the process exit when an error code (1) on
-        // lint error, return the steam an pipe to fialOnError last.
+        // lint error, return the stream an pipe to fialOnError last.
         .pipe(eslint.failOnError());
 });
 
@@ -109,20 +109,26 @@ gulp.task('Start',
 );
 
 gulp.task('Done', function(done) {
-    gulp.src('./*.html')
-        .pipe((gulp.dest('distribution')));
+
+    gulp.src(['index.html'])
+        .pipe(replace('development.js', 'production.min.js'))
+        .pipe(gulp.dest('distribution'));
+
     gulp.src('css/main.css')
         .pipe(uglifycss({
             "maxLineLen": 80,
             "uglyComments": true
         }))
         .pipe(gulp.dest('distribution/css'));
+
     gulp.src('js/**/*.js')
         // compile all es6 to es5 before minifying
         .pipe(babel({presets: ['@babel/env']}))
         .pipe(uglify())
         .pipe(gulp.dest('distribution/js'));
+
     gulp.src('images/*')
         .pipe((gulp.dest('distribution/images')));
+
     done();
 });
