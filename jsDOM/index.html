@@ -14,16 +14,46 @@
         <h1>My HTML Document</h1>
     </header>
 
-    <section>
+    <hr>
 
+    <section>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
     </section>
 
+    <hr>
+
+    <section id="backgroundGeneratorSection">
+        <h1 class="centered">Background Generator</h1>
+        <div id="colorInputs" class="centered">
+
+            <h3>Pick your background colors: </h3>
+            
+            <!-- <button id="colorAddButton">Add a color</button> -->
+            
+            <!-- <button id="colorRemoveButton">Remove a color</button> -->
+
+            <input type="color" name="color1" value="#00ff00">
+
+            <input type="color" name="color2" value="#0059ff">
+
+        </div>
+        <h2 class="centered">Current CSS Background</h2>
+        <h3 id="currentColors" class="centered"></h3>
+    </section>
+    
     <footer id="theFooter">
         <h2>Some cool text in the footer.</h2>
     </footer>
 
-<script src="js/main.js">
-// normalize.css has been removed from the head
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>

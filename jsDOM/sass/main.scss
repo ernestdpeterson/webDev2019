@@ -1,7 +1,7 @@
 $lg: lightgray;
+$tom: tomato;
 
 * {
-    // outline: 1px red solid;
     max-width: 1257px;
     margin: auto;
         :before, :after {
@@ -15,12 +15,35 @@ html{
 body {
     position: relative;
     margin: 0;
-    // padding-bottom: 6rem;
     min-height: 100%;
     background-color: $lg;
 }
-h1 {
+#theHeader {
+    padding: 40px 0 60px 0;
     text-align: center;
+    font-family: "Oswald", Helvetica, sans-serif;
+    font-size: 30px;
+    transform: skewY(-7deg);
+    letter-spacing: 4px;
+    color: $tom;
+    text-shadow: 
+        -1px -1px 0 darken($tom, 30%), 
+        -2px -2px 0 darken($tom, 30%), 
+        -3px -3px 0 darken($tom, 30%), 
+        -4px -4px 0 darken($tom, 30%), 
+        -5px -5px 0 darken($tom, 30%), 
+        -6px -6px 0 darken($tom, 30%), 
+        -7px -7px 0 darken($tom, 30%), 
+        -8px -8px 0 darken($tom, 30%), 
+        -20px 10px 4px darken($lg, 20%);
+}
+.centered {
+    text-align: center;
+    padding: 20px;
+}
+#backgroundGeneratorSection > h1 {
+    color: darken($tom, 15%);
+    font-size: 3vw;
 }
 #theFooter{
     position: absolute;
