@@ -1,0 +1,17 @@
+* { max-width: 1257px; margin: auto; }
+
+* :before, * :after { box-sizing: inherit; }
+
+html { height: 100%; box-sizing: border-box; }
+
+body { position: relative; margin: 0; min-height: 100%; background-color: lightgray; padding-bottom: 40px; }
+
+#theHeader { text-align: center; padding: 2vh 0; }
+
+#firstSection { text-align: center; }
+
+#firstSection > div { padding: 2vh 0; }
+
+#firstSection > div:nth-child(even) { background-color: #e0e0e0; }
+
+#theFooter { position: absolute; left: 0; right: 0; bottom: 0; padding: 1rem; text-align: center; }

@@ -1,0 +1,41 @@
+$lg: lightgray;
+
+* {
+    max-width: 1257px;
+    margin: auto;
+        :before, :after {
+            box-sizing: inherit;
+        }
+}
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    background-color: $lg;
+    padding-bottom: 40px;
+}
+#theHeader {
+    text-align: center;
+    padding: 2vh 0;
+}
+#firstSection {
+    text-align: center;
+    > div {
+        padding: 2vh 0;
+    }
+    > div:nth-child(even) {
+        background-color: lighten($lg, 5%);
+    }
+}
+#theFooter {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    text-align: center;
+}
